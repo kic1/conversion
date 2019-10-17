@@ -1,4 +1,4 @@
-package com.example.awesome;
+package com.example.conversion;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
