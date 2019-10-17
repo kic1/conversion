@@ -2,13 +2,15 @@ input
 -----
  1. URL
  2. Type
-  * HTML 태그 전체
-  * Text 전체 (홑화살괄호 포함하여 사이에 있는 글자는 tag 로 간주하여 삭제 함)
-  ```
-  <html><head><script>alert('#');</script></head><body>Hi</body><html>
-  문자열에서 tag 제거 시 
-  alert('#');Hi
-  ```
+   * `HTML 태그` 제외 (홑화살괄호 포함하여 사이에 있는 글자는 tag 로 간주하여 삭제 함)
+   ```
+   <html><head><script>alert('#');</script></head><body>Hi</body><html>
+  
+   문자열에서 `HTML 태그` 제외 시 
+  
+   alert('#');Hi
+   ```
+   * Text 전체
  3. 출력묶음단위(자연수)
 
 rule

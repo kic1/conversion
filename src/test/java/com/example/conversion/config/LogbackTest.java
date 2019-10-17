@@ -15,6 +15,6 @@ public class LogbackTest {
 		log.warn ("logback-config test warn");
 		log.info ("logback-config test info");
 		log.debug("logback-config test debug");
-		log.trace("logback-config test trace - expected not print");
+		log.trace("logback-config test trace - NOT APPEAR AS EXPECTED");
 	}
 }
