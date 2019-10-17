@@ -12,18 +12,18 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class StringUtilTest {
 	
-	final String targetText   = "<!doctype html><html><head><script>alert('#');</script></head><body>Hi</body><html>";
-	final String expectedText = "alert('#');Hi";
+	private final String targetText   = "<!doctype html><html><head><script>alert('#');</script></head><body>Hi</body><html>";
+	private final String expectedText = "alert('#');Hi";
 	
 	@Test
-	public void t1_escapeTagByJsoup() {
+	public void t1_FAILED_escapeTagByJsoup() {
 		
 		String escapedText = Jsoup.parse(targetText).text();		
 		assertNotSame("FAIL Jsoup", expectedText, escapedText);
 	}
 	
 	@Test
-	public void t2_escapeTagByRegularExpression() {
+	public void t2_FAILED_escapeTagByRegularExpression() {
 		
 		String escapedText = RegExUtils.replaceAll(targetText, "(<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>)", "");
 		assertNotSame("FAIL general expression", expectedText, escapedText);

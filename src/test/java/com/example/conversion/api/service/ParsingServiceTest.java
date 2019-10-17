@@ -20,7 +20,7 @@ import com.example.conversion.api.util.StringUtil;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ParsingServiceTest {
 	
-	final String url = "https://okky.kr/article/639505";
+	private final String url = "https://okky.kr/article/639505";
 	
 	@Test
 	public void t1_getHtmlByUrl() throws IOException {

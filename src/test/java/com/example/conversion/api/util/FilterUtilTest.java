@@ -9,7 +9,7 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class FilterUtilTest {
 	
-	final String source = "01A9a2Bz";
+	private final String source = "01A9a2Bz";
 	
 	@Test
 	public void t1_filterOnlyAlphabet() {
