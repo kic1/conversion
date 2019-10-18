@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.example.conversion.engine.exception.GoneException;
 
 @Service
-public class ParsingService {
+public class ParsingContentService {
 	
 	public String getContents(String url) {
 		

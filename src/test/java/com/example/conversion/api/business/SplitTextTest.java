@@ -16,28 +16,28 @@ public class SplitTextTest {
 	
 	@Test
 	public void t01_splitText() {		
-		BigInteger splitUnitAmount = new BigInteger("3");
+		BigInteger splitUnitAmount = BigInteger.valueOf(3);
 		assertEquals("A0A0a1a7B", getQuotientText(splitUnitAmount));
 		assertEquals("CZ", getRemainText(splitUnitAmount));
 	}
 	
 	@Test
 	public void t02_splitText() {		
-		BigInteger splitUnitAmount = new BigInteger("4");
+		BigInteger splitUnitAmount = BigInteger.valueOf(4);
 		assertEquals("A0A0a1a7", getQuotientText(splitUnitAmount));
 		assertEquals("BCZ", getRemainText(splitUnitAmount));
 	}
 	
 	@Test
 	public void t03_splitText() {		
-		BigInteger splitUnitAmount = new BigInteger("1");
+		BigInteger splitUnitAmount = BigInteger.valueOf(1);
 		assertEquals("A0A0a1a7BCZ", getQuotientText(splitUnitAmount));
 		assertEquals(StringUtils.EMPTY, getRemainText(splitUnitAmount));
 	}
 	
 	@Test
 	public void t04_splitText() {		
-		BigInteger splitUnitAmount = new BigInteger("5");
+		BigInteger splitUnitAmount = BigInteger.valueOf(5);
 		assertEquals("A0A0a1a7BC", getQuotientText(splitUnitAmount));
 		assertEquals("Z", getRemainText(splitUnitAmount));
 	}

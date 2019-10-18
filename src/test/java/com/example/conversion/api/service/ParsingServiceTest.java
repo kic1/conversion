@@ -17,7 +17,7 @@ import com.example.conversion.engine.exception.GoneException;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ParsingServiceTest {
 
-	@Autowired ParsingService parsingService;
+	@Autowired ParsingContentService parsingService;
 	
 	private final String url = "https://okky.kr/article/639505";
 	
