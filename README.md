@@ -1,10 +1,12 @@
 테스트 URL
 -----
-[HTML 태그 제외 (홑화살괄호 포함하여 사이에 있는 글자는 tag 로 간주하여 삭제 함)](http://localhost:8080/conversion?filterCondition=ONLY_TEXT&splitUnitAmount=5&url=https://okky.kr/article/639505){: target="_blank"}
-[Text 전체](http://localhost:8080/conversion?filterCondition=NONE&splitUnitAmount=5&url=https://okky.kr/article/639505){: target="_blank"}
+```
+1. HTML 태그 제외 (홑화살괄호 포함하여 사이에 있는 글자는 tag 로 간주하여 삭제 함)
+http://localhost:8080/conversion?filterCondition=ONLY_TEXT&splitUnitAmount=5&url=https://okky.kr/article/639505
 
-[Google] ( http://www.google.com ) {target = "_ blank"}
-
+2. Text 전체
+http://localhost:8080/conversion?filterCondition=NONE&splitUnitAmount=5&url=https://okky.kr/article/639505
+```
 input
 -----
  1. URL
