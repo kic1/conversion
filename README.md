@@ -6,7 +6,7 @@ input
    ```
    <html><head><script>alert('#');</script></head><body>Hi</body><html>
   
-   문자열에서 `HTML 태그` 제외 시 
+   문자열에서 HTML 태그 제외 시 
   
    alert('#');Hi
    ```
