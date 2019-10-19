@@ -1,29 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="container">
   <h2>conversion</h2>
-  <p>
-  	* URL로 html을 읽어와서 문자열을 추출/정렬/조합/분할 합니다.<br/>
-  	URL : https://okky.kr/article/639505<br/>
-  	Type : INCLUDE_ALL_TEXT<br/>
-  	출력묶음단위(자연수) : 5
-  </p>
+  <p>* URL로 html을 읽어와서 문자열을 추출/정렬/조합/분할 합니다.</p>
   <form class="form-inline" action="" method="get" id="conversionForm">
 	<table class="table table-bordered">
 	  <colgroup>
 		<col width="25%" />
 		<col width="75%" />
 	  </colgroup>
-	  <tbody>
+	  <tbody class="thead-dark">
 	    <tr>
-	      <th class="active">URL</th>
+	      <th class="">URL</th>
 	      <td>
 			<div class="form-group has-feedback">
-			  <input class="form-control required url" name="targetUrl" id="targetUrl" type="url" value="" placeholder="https://air.wonders.app/" />
+			  <input class="form-control required url" name="targetUrl" id="targetUrl" type="url" value="" placeholder="https://air.wonders.app/" style="width:350px" />
 			</div>
 		  </td>
 	    </tr>
 	    <tr>
-	      <th class="active">Type</th>
+	      <th class="thead-dark">Type</th>
 	      <td>
 			<div class="form-group has-feedback">
               <select class="form-control required" id="filterCondition" name="filterCondition">
@@ -34,14 +29,14 @@
 		  </td>
 	    </tr>
 	    <tr>
-	      <th class="active">출력묶음단위(자연수)</th>
+	      <th class="thead-dark">출력묶음단위 (자연수)</th>
 	      <td>
 			<div class="form-group has-feedback">
 			  <input class="form-control required" min="1" name="splitUnitAmount" id="splitUnitAmount" type="number" value="" placeholder="5" />
 			</div>
 		  </td>
 	    </tr>
-	    <tr><td colspan="2"><button type="button" id="conversionSubmit">출력</button></td></tr>
+	    <tr><td colspan="2" class="text-center"><button type="button" class="btn btn-info" id="conversionSubmit">출력</button></td></tr>
 	  </tbody>
 	  </table>
   </form>
@@ -53,9 +48,9 @@
 		<col width="25%" />
 		<col width="75%" />
 	  </colgroup>
-	  <tbody>
+	  <tbody class="thead-dark">
 	    <tr>
-	      <th class="active">몫</th>
+	      <th class="">몫</th>
 	      <td>
 			<div class="form-group has-feedback">
 			  <textarea class="text-area form-control" style="height: 150px" id="quotientDiv"></textarea>
@@ -63,7 +58,7 @@
 		  </td>
 	    </tr>
 	    <tr>
-	      <th class="active">나머지</th>
+	      <th class="thead-dark">나머지</th>
 	      <td>
 			<div class="form-group has-feedback">
 			  <textarea class="text-area form-control" style="height: 150px" id="remainDiv"></textarea>
