@@ -8,6 +8,6 @@ import com.example.conversion.api.business.BusinessPattern;
 public class FilterHtmlUtil {
 	
 	public static String escapeTag(String source) {
-		return RegExUtils.replaceAll(source, BusinessPattern.HTML_TAG.getRegex(), StringUtils.EMPTY);
+		return RegExUtils.replaceAll(source, BusinessPattern.HTML_TAGS.getRegex(), StringUtils.EMPTY);
 	}
 }

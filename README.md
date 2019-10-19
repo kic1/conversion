@@ -1,10 +1,32 @@
 테스트 URL
 -----
-1. HTML 태그 제외 (홑화살괄호 포함하여 사이에 있는 글자는 tag 로 간주하여 삭제 함)
-(http://localhost:8080/conversion?filterCondition=ONLY_TEXT&splitUnitAmount=5&url=https://okky.kr/article/639505)
+WEB http://localhost:8080/conversion/form
 
-2. Text 전체
-(http://localhost:8080/conversion?filterCondition=NONE&splitUnitAmount=5&url=https://okky.kr/article/639505)
+API http://localhost:8080/swagger-ui.html
+
+구성
+---------------
+1. 환경
+
+ * windows 10
+ * Spring Tool Suite 4.1.2.RELEASE(build 201902210640)
+ * JDK 1.8.0.201
+
+2. 라이브러리
+
+ * spring boot 2.1.9.RELEASE
+ * spring framework 5.1.10.RELEASE
+ * spring tomcat 2.1.9.RELEASE(scope:provided, tomcat 9.0.26)
+ * spring web
+ * spring rest
+ * spring test(scope:test)
+ * spring dev-tools(scope:runtime)
+ * lombok 1.18.10
+ * jsoup 1.12.1
+ * commons-lang3 3.8.1
+ * swagger 2.9.2
+ * tomcat embed jasper 9.0.26
+ * tiles 3.0.8
 
 input
 -----

@@ -6,6 +6,9 @@ import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.URL;
 
+import com.example.conversion.api.business.FilterCondition;
+
+import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,9 +18,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class RequestForm {
 	
+	@ApiParam(required=true, name="targetUrl", value="대상 URL", defaultValue="https://okky.kr/article/639505")
 	@URL
-    private String url;
-    private String filterCondition;
+    private String targetUrl;
+	
+	@ApiParam(required=true, name="filterCondition", value="HTML 태그 제외(EXCLUDE_HTML_TAG) || Text 전체(INCLUDE_ALL_TEXT)", defaultValue="EXCLUDE_HTML_TAG")
+    private FilterCondition filterCondition;
+	
+	@ApiParam(required=true, name="splitUnitAmount", value="출력묶음단위(자연수)", defaultValue="5")
     @Positive
     private BigInteger splitUnitAmount;
 }

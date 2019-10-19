@@ -1,5 +1,6 @@
 package com.example.conversion.api.business;
 
 public enum FilterCondition {
-	NONE, ONLY_TEXT;
+	EXCLUDE_HTML_TAG,
+	INCLUDE_ALL_TEXT;
 }

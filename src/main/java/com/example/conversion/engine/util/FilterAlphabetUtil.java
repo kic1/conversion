@@ -8,6 +8,6 @@ import com.example.conversion.api.business.BusinessPattern;
 public class FilterAlphabetUtil {
 	
 	public static String getOnlyAlphabet(String source) {
-		return RegExUtils.replaceAll(source, BusinessPattern.DOES_NOT_CONTAIN_ALPHABETS.getRegex(), StringUtils.EMPTY);
+		return RegExUtils.replaceAll(source, BusinessPattern.DOES_NOT_CONTAIN_ALPHABET.getRegex(), StringUtils.EMPTY);
 	}
 }

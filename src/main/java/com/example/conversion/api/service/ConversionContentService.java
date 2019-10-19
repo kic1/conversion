@@ -2,11 +2,10 @@ package com.example.conversion.api.service;
 
 import java.math.BigInteger;
 
-import org.jsoup.internal.StringUtil;
 import org.springframework.stereotype.Service;
 
-import com.example.conversion.api.business.MergeText;
 import com.example.conversion.api.business.FilterCondition;
+import com.example.conversion.api.business.MergeText;
 import com.example.conversion.api.business.SplitText;
 import com.example.conversion.api.form.RequestForm;
 import com.example.conversion.api.form.ResponseForm;
@@ -31,11 +30,11 @@ public class ConversionContentService {
 		
 		log.debug("*** requestForm : " + requestForm);
 		
-		String url = requestForm.getUrl();
-		String filterCondition = requestForm.getFilterCondition();
+		String targetUrl = requestForm.getTargetUrl();
+		FilterCondition filterCondition = requestForm.getFilterCondition();
 		BigInteger splitUnitAmount = requestForm.getSplitUnitAmount();
 
-		String parseText  = parse(url);
+		String parseText  = parse(targetUrl);
 		String escapeText = escapeTag(parseText, filterCondition);
 		String mergedText = sortAndCombinateByCharacter(escapeText);
 		
@@ -49,13 +48,12 @@ public class ConversionContentService {
 		return parsingContentService.getContents(url);
 	}
 	
-	private String escapeTag(String parseText, String filterCondition) {
+	private String escapeTag(String source, FilterCondition filter) {
 		
 		
-		String result = parseText;
-		if(FilterCondition.ONLY_TEXT.name().equals(filterCondition)) {
-			log.debug("*** escapeTag");
-			result = FilterHtmlUtil.escapeTag(parseText);
+		String result = source;
+		if(FilterCondition.EXCLUDE_HTML_TAG.equals(filter)) {
+			result = FilterHtmlUtil.escapeTag(source);
 		}
 		return result;
 	}
