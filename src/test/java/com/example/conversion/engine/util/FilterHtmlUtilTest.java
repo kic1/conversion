@@ -10,6 +10,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import com.example.conversion.api.business.BusinessPattern;
 import com.example.conversion.engine.util.FilterHtmlUtil;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -35,7 +36,7 @@ public class FilterHtmlUtilTest {
 	@Test
 	public void t03_escapeTagByRegularExpression() {
 		
-		String escapedText = RegExUtils.replaceAll(targetText, "<.*?>", StringUtils.EMPTY);
+		String escapedText = RegExUtils.replaceAll(targetText, BusinessPattern.HTML_TAGS.getRegex(), StringUtils.EMPTY); // "<.*?>"
 		assertEquals(expectedText, escapedText);
 	}
 	

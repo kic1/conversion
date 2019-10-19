@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class RequestForm {
 	
-	@ApiParam(required=true, name="targetUrl", value="대상 URL", defaultValue=ConversionConstants.PARSING_URL_SAMPLE)
+	@ApiParam(required=true, name="targetUrl", value="대상 URL", defaultValue=ConversionConstants.SAMPLE_PARSING_URL)
 	@URL
     private String targetUrl;
 	

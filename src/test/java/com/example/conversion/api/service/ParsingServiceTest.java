@@ -23,13 +23,13 @@ public class ParsingServiceTest {
 	@Test
 	public void t01_getContents() {
 		
-		String contents = parsingService.getContents(ConversionConstants.PARSING_URL_SAMPLE);
+		String contents = parsingService.getContents(ConversionConstants.SAMPLE_PARSING_URL);
 		assertNotNull(contents);
 	}
 	
 	@Test(expected = GoneException.class)
 	public void t02_getContentsExpect_FAIL() {
 		
-		parsingService.getContents("http://INVAILD.URL");
+		parsingService.getContents(ConversionConstants.SAMPLE_INVALID_URL);
 	}
 }

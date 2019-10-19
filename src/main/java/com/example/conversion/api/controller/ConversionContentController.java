@@ -25,7 +25,7 @@ public class ConversionContentController {
 	
 	@ApiOperation(
 			value="conversion", 
-			notes="ex) /api/conversion?filterCondition=INCLUDE_ALL_TEXT&splitUnitAmount=5&targetUrl=" + ConversionConstants.PARSING_URL_SAMPLE,
+			notes="ex) /api/conversion?filterCondition=INCLUDE_ALL_TEXT&splitUnitAmount=5&targetUrl=" + ConversionConstants.SAMPLE_PARSING_URL,
 			response=ResponseForm.class
 	)
 	@GetMapping("/conversion")
