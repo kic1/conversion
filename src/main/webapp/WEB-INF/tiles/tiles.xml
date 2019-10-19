@@ -4,18 +4,21 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-
-	<!-- Templates -->
-	<definition name="noneLayout" template="/WEB-INF/jsp/layout/layout_none.jsp">
+	
+	<!-- jsLayout Templates -->
+	<definition name="jsLayout" template="/WEB-INF/jsp/layout/layout_js.jsp">
 		<put-attribute name="body" value="" />
+		<put-attribute name="js" value="" />
 	</definition>
 	
-	<!-- 공통 레이아웃 -->
-	<definition name="*/*" extends="noneLayout">
+	<!-- 자바스크립트 레이아웃 -->
+	<definition name="*/*" extends="jsLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+		<put-attribute name="js" value="/WEB-INF/jsp/include/{1}/{2}JS.jsp" />
 	</definition>
-	<definition name="*" extends="noneLayout">
+	<definition name="*" extends="jsLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+		<put-attribute name="js" value="/WEB-INF/jsp/include/{1}JS.jsp" />
 	</definition>
 	
 </tiles-definitions>
