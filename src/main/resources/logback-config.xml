@@ -13,6 +13,7 @@
 	<logger name="org.springframework.web"    level="DEBUG"/>
 	<logger name="org.springframework.client" level="INFO" />
 	<logger name="org.springframework"        level="INFO" />
+	<logger name="io.swagger.models.parameters.AbstractSerializableParameter" level="ERROR" />
 	
     <root level="INFO">
         <appender-ref ref="ConsoleOut" />
