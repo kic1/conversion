@@ -1,8 +1,8 @@
 테스트 URL
 -----
-WEB http://localhost:8080/conversion/form
+WEB : http://localhost:8080/conversion/form
 
-API http://localhost:8080/swagger-ui.html
+API : http://localhost:8080/swagger-ui.html
 
 구성
 ---------------
