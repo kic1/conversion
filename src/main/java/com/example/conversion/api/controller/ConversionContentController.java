@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.conversion.api.form.RequestForm;
 import com.example.conversion.api.form.ResponseForm;
 import com.example.conversion.api.service.ConversionContentService;
+import com.example.conversion.engine.constants.ConversionConstants;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,7 +25,7 @@ public class ConversionContentController {
 	
 	@ApiOperation(
 			value="conversion", 
-			notes="ex) /api/conversion?filterCondition=INCLUDE_ALL_TEXT&splitUnitAmount=5&targetUrl=https://okky.kr/article/639505",
+			notes="ex) /api/conversion?filterCondition=INCLUDE_ALL_TEXT&splitUnitAmount=5&targetUrl=" + ConversionConstants.PARSING_URL_SAMPLE,
 			response=ResponseForm.class
 	)
 	@GetMapping("/conversion")

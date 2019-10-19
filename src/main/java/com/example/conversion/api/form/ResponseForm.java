@@ -10,6 +10,7 @@ public class ResponseForm {
 	
 	@ApiModelProperty(value="몫")
     private String quotientText;
+	
 	@ApiModelProperty(value="나머지")
     private String remainText;
 }

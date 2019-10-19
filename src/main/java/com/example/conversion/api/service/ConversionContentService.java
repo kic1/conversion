@@ -17,9 +17,7 @@ import com.example.conversion.engine.util.FilterNumberUtil;
 import com.example.conversion.engine.util.SortStringUtil;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @RequiredArgsConstructor
 @Service
 public class ConversionContentService {
@@ -28,15 +26,13 @@ public class ConversionContentService {
 	
 	public ResponseForm getResult(RequestForm requestForm) {
 		
-		log.debug("*** requestForm : " + requestForm);
-		
 		String targetUrl = requestForm.getTargetUrl();
 		FilterCondition filterCondition = requestForm.getFilterCondition();
 		BigInteger splitUnitAmount = requestForm.getSplitUnitAmount();
 
 		String parseText  = parse(targetUrl);
 		String escapeText = escapeTag(parseText, filterCondition);
-		String mergedText = sortAndCombinateByCharacter(escapeText);
+		String mergedText = sortAndMergeByCharacter(escapeText);
 		
 		return ResponseForm.builder()
 		                   .quotientText(SplitText.getQuotientText(mergedText, splitUnitAmount))
@@ -50,7 +46,6 @@ public class ConversionContentService {
 	
 	private String escapeTag(String source, FilterCondition filter) {
 		
-		
 		String result = source;
 		if(FilterCondition.EXCLUDE_HTML_TAG.equals(filter)) {
 			result = FilterHtmlUtil.escapeTag(source);
@@ -58,7 +53,7 @@ public class ConversionContentService {
 		return result;
 	}
 	
-	private String sortAndCombinateByCharacter(String source) {
+	private String sortAndMergeByCharacter(String source) {
 		
 		String onlyAlphabetText = FilterAlphabetUtil.getOnlyAlphabet(source);
 		String onlyNumberText   = FilterNumberUtil.getOnlyNumber(source);

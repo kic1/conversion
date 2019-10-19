@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class ConversionWebController {
 	
+	public final static String VIEW_CONVERSION_FORM_PAGE = "conversion";
+	
 	@GetMapping(value = {"", "/conversion/form"})
 	public String getConversionForm() {
-		return "conversion";
+		return VIEW_CONVERSION_FORM_PAGE;
 	}
 }

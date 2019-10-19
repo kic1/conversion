@@ -7,18 +7,21 @@ import javax.validation.constraints.Positive;
 import org.hibernate.validator.constraints.URL;
 
 import com.example.conversion.api.business.FilterCondition;
+import com.example.conversion.engine.constants.ConversionConstants;
 
 import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequestForm {
 	
-	@ApiParam(required=true, name="targetUrl", value="대상 URL", defaultValue="https://okky.kr/article/639505")
+	@ApiParam(required=true, name="targetUrl", value="대상 URL", defaultValue=ConversionConstants.PARSING_URL_SAMPLE)
 	@URL
     private String targetUrl;
 	

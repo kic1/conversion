@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.example.conversion.engine.constants.ConversionConstants;
 import com.example.conversion.engine.exception.GoneException;
 
 @RunWith(SpringRunner.class)
@@ -19,12 +20,10 @@ public class ParsingServiceTest {
 
 	@Autowired ParsingContentService parsingService;
 	
-	private final String url = "https://okky.kr/article/639505";
-	
 	@Test
 	public void t01_getContents() {
 		
-		String contents = parsingService.getContents(url);
+		String contents = parsingService.getContents(ConversionConstants.PARSING_URL_SAMPLE);
 		assertNotNull(contents);
 	}
 	
