@@ -70,12 +70,3 @@ rule 1~4의 결과 : A0A0a1a2Bbb
 2. 나머지 : bb
 
 * `A0A` `0a1` `a2B` 3개의 묶음단위로 묶이므로 몫은 A0A0a1a2B, 남은 bb 는 나머지
-
-constraints
------
-* TDD
-* 람다표현식 사용
-* maven build
-* log-back
-* spring 5
-* JDK 8
